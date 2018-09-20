@@ -1,0 +1,152 @@
+{% load static %}
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet">
+  <title>
+   Good night!
+  </title>
+</head>
+<!--<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+     -->
+ <style>
+     input.line{
+        background: none;
+        outline: none;
+        border: none;
+        border-bottom: solid 1px #9ffff5;
+     }
+     #accordion-assistantt input.line{
+     width: 90%;
+     }
+     #accordion-assistantt .Pronounciation input.line,#singleInfo input.line,#paperStatic input.line,#wordsInfo input.line,#phraseInfo input.line,#sentenceInfo input.line{
+     width: 90%;
+     }
+     .word-wrap-span{
+         color:red
+     }
+     #paperContent img{
+         width: 23px;
+     }
+     #articleArea{
+     width: 100%;
+    height: 1600px;
+     }
+ </style>
+<body>
+     {% csrf_token %}
+     <hr/>
+     <div class="col-md-12" id="main-area">
+        <div><h1 align="center"><input type="text" placeholder="input file path" id="oopath" value="2018_8_25_1"><button id="loadoo">Load</button>&nbsp;<button id="submit">Submit</button></h1></div>
+         <ul class="nav nav-tabs" id="swith-nav-a" role="tablist">
+            <li class="nav-item active">
+              <a class="nav-link active fa fa-podcast" data-toggle="tab" href="#assistantt"> assistant</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fa fa-wpforms" data-toggle="tab" href="#contentt"> content</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fa fa-video-camera" data-toggle="tab" href="#statistict"> statistic</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link fa fa-video-camera" data-toggle="tab" href="#single"> single</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link fa fa-video-camera" data-toggle="tab" href="#words"> words</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link fa fa-video-camera" data-toggle="tab" href="#phrase"> phrase</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link fa fa-video-camera" data-toggle="tab" href="#sentence"> sentence</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link fa fa-video-camera" data-toggle="tab" href="#grammar"> grammar</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link fa fa-video-camera" data-toggle="tab" href="#extension"> extension</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fa fa-music" data-toggle="tab" href="#othert"> other</a>
+            </li>
+        </ul>
+    <div class="tab-content">
+    <div id="assistantt" class="container tab-pane active">
+                <div class="panel-group" id="accordion-assistantt">
+                </div>
+    </div>
+    <div id="contentt" class="container tab-pane">
+            <div class="col-md-6 contenta" contenteditable="true" id="paperContent" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;"></div>
+            <div class="col-md-6" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <textarea id="articleArea"></textarea>
+            </div>
+    </div>
+    <div id="statistict" class="container tab-pane">
+
+            <div class="contenta" id="paperStatic">
+                statistics
+            </div>
+
+    </div>
+        <div id="single" class="container tab-pane">
+
+            <div class="contenta" id="singleInfo">
+                wordsInfo
+            </div>
+
+    </div>
+    <div id="words" class="container tab-pane">
+
+            <div class="contenta" id="wordsInfo">
+                wordsInfo
+            </div>
+
+    </div>
+        <div id="phrase" class="container tab-pane">
+
+            <div class="contenta" id="phraseInfo">
+                wordsInfo
+            </div>
+
+    </div>
+        <div id="sentence" class="container tab-pane">
+
+            <div class="contenta" id="sentenceInfo">
+                wordsInfo
+            </div>
+
+    </div>
+        <div id="grammar" class="container tab-pane">
+
+            <div class="contenta" id="grammarInfo">
+                wordsInfo
+            </div>
+
+    </div>
+        <div id="extension" class="container tab-pane">
+
+            <div class="contenta" id="extensionInfo">
+                wordsInfo
+            </div>
+
+    </div>
+    <div id="othert" class="container tab-pane">
+
+            <div class="contenta" id="otherInfo">
+                other
+            </div>
+
+    </div>
+    </div>
+    </div>
+<script src="{% static 'js/alert_create.js' %}"></script>
+</body>
+</html>

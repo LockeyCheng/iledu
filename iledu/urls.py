@@ -23,6 +23,9 @@ urlpatterns = [
     path('index', views.index, name='index'),
     path('account/', include('userapp.urls')),
     path('postdata/',views.postdata,name='postdata'),
+    path('article', views.article, name='article'),
+    path('get_oo', views.get_oo, name='get_oo'),
+    path('post_oo', views.post_oo, name='post_oo'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = views.page_error
